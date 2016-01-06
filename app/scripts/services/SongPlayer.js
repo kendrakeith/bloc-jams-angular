@@ -3,7 +3,7 @@
         var SongPlayer = {};
         
         /**
-        * @desc current album
+        * @desc Current album
         * @type {Object}
         */
         
@@ -95,6 +95,12 @@
         * @param {Object} song
         */
         
+        /**
+        * @desc Volume used for songs
+        * @type {Number}
+        */
+        SongPlayer.volume = 60;
+        
         SongPlayer.play = function(song) {
             song = song || SongPlayer.currentSong;
             if (SongPlayer.currentSong !== song) {
@@ -121,7 +127,7 @@
         
         /**
         * @function previous
-        * @desc stop the currently playing song and set to previous song in album
+        * @desc Stop current song and set to previous song in album
         * @param {Object} song
         */
         
